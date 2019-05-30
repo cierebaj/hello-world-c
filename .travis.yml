@@ -1,0 +1,7 @@
+language: cpp
+compiler: gcc
+dist: xenial
+
+script: 
+  - g++ main.cpp -std=c++17 -o travis_gcc_cpp17
+  - ./travis_gcc_cpp17
