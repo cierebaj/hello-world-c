@@ -2,6 +2,14 @@ language: cpp
 compiler: gcc
 dist: xenial
 
+env:
+  global:
+    - CAMPFIRE_TOKEN=abc123
+    - TIMEOUT=1000
+
+before_script:
+        - ./echo_variables.sh
+
 script: 
   - g++ main.cpp -std=c++17 -o travis_gcc_cpp17
   - ./travis_gcc_cpp17
